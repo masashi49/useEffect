@@ -1,9 +1,17 @@
-import { FC } from 'react';
+import React  from 'react';
 
-type Props = JSX.IntrinsicElements['button'] & {
-  children: React.ReactNode
-}
+type ElementType = HTMLButtonElement | null
+type ButtonProps = JSX.IntrinsicElements['button']
 
-export const Button: FC<Props> = ({ children, ...props }) => {
-  return <button {...props} >{children}</button>
-}
+export const Button = React.forwardRef<ElementType, ButtonProps>((
+  props,
+  ref
+) => {
+  return (
+    <label>
+      <button ref={ref} {...props}>
+        {props.children}
+      </button>
+    </label>
+  )
+})
