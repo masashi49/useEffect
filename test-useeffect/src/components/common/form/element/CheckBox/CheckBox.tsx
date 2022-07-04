@@ -1,11 +1,9 @@
-import { FC } from 'react';
-
 type Props = {
   name: string
   defaultChecked: boolean
   className: string
 }
 
-export const CheckBox: FC<Props> = ({ ...props }) => {
+export const CheckBox = ({ ...props }: Props) => {
   return <input type='checkbox' {...props} />
 }

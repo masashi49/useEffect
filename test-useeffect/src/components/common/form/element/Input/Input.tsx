@@ -1,8 +1,16 @@
-import { FC } from 'react';
 
+import { ComponentPropsWithoutRef, forwardRef } from "react";
+import styles from "./styles.module.css";
 
-type Props = JSX.IntrinsicElements['input']
-
-export const Input: FC<Props> = ({ ...props }) => {
-  return <input {...props} />
-}
+export const Input = forwardRef<
+  HTMLInputElement,
+  ComponentPropsWithoutRef<"input">
+>(({ className, ...props }, ref) => {
+  return (
+    <input
+      type="text"
+      {...props}
+      ref={ref}
+    />
+  );
+});
