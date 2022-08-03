@@ -4,6 +4,7 @@ import { Input } from './components/common/form/element/Input'
 import { CheckBox } from './components/common/form/element/CheckBox';
 import { Select } from './components/common/form/element/Select';
 import { TextArea } from './components/common/form/element/TextArea';
+import { Seach } from './components/common/form/element/Seach';
 
 export const App = () => {
 
@@ -65,6 +66,8 @@ export const App = () => {
         className='textArea'
         placeholder='ご要望'
       />
+
+      <Seach />
 
     </div>
   );
