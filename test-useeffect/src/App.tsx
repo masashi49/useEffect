@@ -6,6 +6,8 @@ import { Select } from './components/common/form/element/Select';
 import { TextArea } from './components/common/form/element/TextArea';
 import { Seach } from './components/common/form/element/Seach';
 
+import { CustomHook } from './components/common/form/element/CustomHook/CustomHook'
+
 export const App = () => {
 
   const handler = () => {
@@ -24,7 +26,7 @@ export const App = () => {
   }
 
   return (
-    
+
     <div className="App">
       <button onClick={catchRef}>Buttonのref.current</button>
       <Button
@@ -69,6 +71,7 @@ export const App = () => {
 
       <Seach />
 
+      <CustomHook />
     </div>
   );
 }
