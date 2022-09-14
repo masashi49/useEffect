@@ -7,6 +7,7 @@ import { TextArea } from './components/common/form/element/TextArea';
 import { Seach } from './components/common/form/element/Seach';
 
 import { CustomHook } from './components/common/form/element/CustomHook/CustomHook'
+import { ContextApp } from './components/common/ContextSample/ContextApp'
 
 export const App = () => {
 
@@ -72,6 +73,12 @@ export const App = () => {
       <Seach />
 
       <CustomHook />
+
+      -----------------------------------------------------------
+
+      <br />
+      <br />
+      <ContextApp />
     </div>
   );
 }
