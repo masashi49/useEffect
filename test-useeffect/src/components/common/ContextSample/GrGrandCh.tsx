@@ -1,9 +1,9 @@
 
 import { useCounter } from "./Parent"
 
-
 export const GrGrandChildren = () => {
-    const { setGreatGrandChild } = useCounter() // 型定義なので、setChildが入っていることが保証されている
+    // 親で呼び出し用のカスタムフックを用意しているので、ここでuseContextを呼ばなくてOK
+    const { setGreatGrandChild } = useCounter()
     return (
         <div>
             孫ですよ
