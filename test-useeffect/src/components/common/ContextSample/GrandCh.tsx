@@ -1,9 +1,10 @@
-import { useContext } from "react"
-import { setStateContext } from "./Parent"
+import { useContext ,memo} from "react"
+import { setGrStateChildContext } from "./Parent"
 import { GrGrandChildren } from "./GrGrandCh"
 
-export const GrandChildren = () => {
-    const { setGrandChild } = useContext(setStateContext) // 型定義なので、setChildが入っていることが保証されている
+export const GrandChildren = memo(() => {
+    const { setGrandChild } = useContext(setGrStateChildContext) // 型定義なので、setChildが入っていることが保証されている
+    console.log("Gr")
     return (
         <div>
             孫です
@@ -14,3 +15,4 @@ export const GrandChildren = () => {
         </div>
     )
 }
+)

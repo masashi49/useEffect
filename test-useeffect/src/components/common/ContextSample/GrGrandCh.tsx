@@ -1,9 +1,10 @@
+import {memo} from "react"
+import { useGrGrChildCounter } from "./Parent"
 
-import { useCounter } from "./Parent"
-
-export const GrGrandChildren = () => {
+export const GrGrandChildren = memo(() => {
     // 親で呼び出し用のカスタムフックを用意しているので、ここでuseContextを呼ばなくてOK
-    const { setGreatGrandChild } = useCounter()
+    const { setGreatGrandChild } = useGrGrChildCounter()
+    console.log("GrGr")
     return (
         <div>
             孫ですよ
@@ -12,4 +13,4 @@ export const GrGrandChildren = () => {
                 onChange={(e) => setGreatGrandChild(Number(e.target.value))} /> {/*e.target.valueはstringなので、Numberで型変更*/}
         </div>
     )
-}
+})
