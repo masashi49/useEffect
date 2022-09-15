@@ -1,4 +1,4 @@
-import React, { createContext, useState, Dispatch, SetStateAction } from "react"
+import React, { createContext, useState, Dispatch, SetStateAction,useContext } from "react"
 import { Children } from "./Children"
 
 
@@ -13,6 +13,11 @@ type SetTypeObject = {
 
 // 型アサーションで方を付与する。setStateContextはSetTypeObjectをもつ事を担保できた
 export const setStateContext = createContext({} as SetTypeObject)
+
+
+export const useCounter = () => {
+    return useContext(setStateContext)
+}
 
 export const Parent = () => {
     const [child, setChild] = useState<number>(0)
