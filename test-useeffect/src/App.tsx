@@ -8,6 +8,7 @@ import { Seach } from './components/common/form/element/Seach';
 
 import { CustomHook } from './components/common/form/element/CustomHook/CustomHook'
 import { ContextApp } from './components/common/ContextSample/ContextApp'
+import { Parent2 } from './components/common/ContextSample2/Parent2'
 
 export const App = () => {
 
@@ -79,6 +80,11 @@ export const App = () => {
       <br />
       <br />
       <ContextApp />
+      <br />
+      <br />      <br />
+      <br />
+      -------------------
+      <Parent2 />
     </div>
   );
 }
