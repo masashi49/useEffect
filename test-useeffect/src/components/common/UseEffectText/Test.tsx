@@ -17,10 +17,24 @@ export const UseEffectTest = () => {
     }
 
     useEffect(() => {
-        setTimeout(() => {
-            console.log(count)
-        }, 2000)
+        // setTimeout(() => {
+        //     console.log(count)
+        // }, 2000)
     })
+
+    useEffect(() => {
+        const id = setInterval(() => {
+            setCount((c) => {
+                console.log(c)
+                return c + 1
+            })
+            console.log(count)
+        }, 1000)
+        return () => clearInterval(id)
+    }, []) // defsを空にした。1秒毎にカウントアップしたいのに、カウントが止まってしまう。
+    // これは、処理が停止しているわけではない、永遠と1秒毎に動いている。
+    // カウントが変わった後際レンダリングされていないので、ずっと同じカウント(この場合0)に+1されている。
+    // countを修理しているのではなく、レンダリングされた時のcountを常に呼び続けている。
 
     return (
         <div>

@@ -9,7 +9,8 @@ import { Seach } from './components/common/form/element/Seach';
 import { CustomHook } from './components/common/form/element/CustomHook/CustomHook'
 import { ContextApp } from './components/common/ContextSample/ContextApp'
 import { Parent2 } from './components/common/ContextSample2/Parent2'
-import { UseEffectTest } from './components/common/UseEffectText/Test'
+//import { UseEffectTest } from './components/common/UseEffectText/Test'
+import { UseEffectTest2 } from './components/common/UseEffectText/Test2'
 
 export const App = () => {
 
@@ -90,7 +91,9 @@ export const App = () => {
 
       <br />
       <br />
-      <UseEffectTest />
-    </div>
+
+
+      <br /><br />      <br /><br />      <br /><br />
+      <UseEffectTest2 /></div>
   );
 }
