@@ -7,7 +7,6 @@ export const UseEffectTest2 = () => {
     useEffect(() => {
         const id = setInterval(() => {
             setCount((c) => {
-                console.log(c)
                 return c + 1
             })
             console.log(count)

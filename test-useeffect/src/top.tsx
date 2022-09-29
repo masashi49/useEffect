@@ -12,7 +12,7 @@ import { Parent2 } from './components/common/ContextSample2/Parent2'
 //import { UseEffectTest } from './components/common/UseEffectText/Test'
 import { UseEffectTest2 } from './components/common/UseEffectText/Test2'
 
-export const App = () => {
+export const Top = () => {
 
   const handler = () => {
     console.log("hello")
